@@ -11,7 +11,7 @@ export default function Result(props) {
           <li>
             <span> Wednesday, Feb 2 13:53</span>
           </li>
-          <li>{props.result.description}</li>
+          <li className="text-capitalize">{props.result.description}</li>
         </ul>
       </div>
       <div className="row">

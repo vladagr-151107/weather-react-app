@@ -60,9 +60,6 @@ li {
   font-size: 20px;
   top: -30px;
 }
-#description:first-letter {
-  text-transform: capitalize;
-}
 .weather-forecast {
   margin-top: 15px;
   text-align: center;
