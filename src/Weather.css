@@ -25,16 +25,22 @@ h1 {
   font-size: 50px;
   line-height: 40px;
 }
-ul {
+.overview-weather {
   margin: 0;
   padding: 0;
 }
 li {
   list-style: none;
   font-size: 24px;
+  line-height: 30px;
   margin: 0;
   padding: 0;
-  line-height: 30px;
+}
+.hum-span {
+  margin-right: 80px;
+}
+.ul-hum-span {
+  margin-top: -70px;
 }
 .overview {
   margin-bottom: 20px;
@@ -69,4 +75,8 @@ li {
 }
 .forecast-temp-min {
   opacity: 0.8;
+}
+a {
+  text-decoration: none;
+  color: #082567;
 }

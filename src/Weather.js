@@ -23,6 +23,7 @@ export default function Weather() {
                   placeholder="Search for a city"
                   className="form-control"
                   autoComplete="off"
+                  autoFocus="on"
                 />
               </div>
               <div className="col-2">
@@ -36,7 +37,7 @@ export default function Weather() {
           </form>
           <div className="overview">
             <h1> Odesa </h1>
-            <ul>
+            <ul className="overview-weather">
               <li>
                 <span> Wednesday, Jan 11 13:53</span>
               </li>
@@ -56,15 +57,17 @@ export default function Weather() {
                 </div>
               </div>
             </div>
-            <div classname="col-6">
-              <ul>
-                <li>
-                  Humidity: <span></span>67%
-                </li>
-                <li>
-                  Wind: <span></span>9 km/h
-                </li>
-              </ul>
+            <div className="d-flex flex-row-reverse">
+              <div classname="col-6">
+                <ul className="ul-hum-span">
+                  <li className="hum-span">
+                    Humidity: <span></span>67%
+                  </li>
+                  <li className="hum-span">
+                    Wind: <span></span>9 km/h
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
