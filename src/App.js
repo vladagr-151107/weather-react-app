@@ -10,6 +10,7 @@ export default function App() {
       ready: true,
       city: response.data.city,
       temperature: response.data.temperature.current,
+      data: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,

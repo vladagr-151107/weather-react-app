@@ -1,4 +1,5 @@
 import React from "react";
+import FormattedDate from "./FormattedDate";
 import "./App.css";
 
 export default function Result(props) {
@@ -9,7 +10,9 @@ export default function Result(props) {
         <h1> {props.result.city} </h1>
         <ul className="overview-weather">
           <li>
-            <span> Wednesday, Feb 2 13:53</span>
+            <span>
+              <FormattedDate date={props.result.data} />
+            </span>
           </li>
           <li className="text-capitalize">{props.result.description}</li>
         </ul>
