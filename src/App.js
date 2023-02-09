@@ -89,6 +89,6 @@ export default function App() {
     );
   } else {
     search();
-    return "Loading";
+    return <div className="loading">Loading...</div>;
   }
 }

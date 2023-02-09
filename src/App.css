@@ -77,3 +77,11 @@ li {
   text-decoration: none;
   color: #082567;
 }
+.unit-link {
+  text-decoration: none;
+}
+.loading {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 40px;
+}
