@@ -73,7 +73,7 @@ li {
 .forecast-temp-min {
   opacity: 0.8;
 }
-a {
+.link {
   text-decoration: none;
   color: #082567;
 }

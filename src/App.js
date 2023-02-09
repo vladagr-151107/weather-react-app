@@ -67,6 +67,7 @@ export default function App() {
           </div>
           <small>
             <a
+              className="link"
               href="https://github.com/vladagr-151107/my-app"
               target="_blank"
               rel="noreferrer"
@@ -75,6 +76,7 @@ export default function App() {
             </a>{" "}
             by{" "}
             <a
+              className="link"
               href="https://www.instagram.com/_princesska_1511_/?igshid=YmMyMTA2M2Y%3D"
               target="_blank"
               rel="noreferrer"
