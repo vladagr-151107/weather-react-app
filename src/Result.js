@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 import "./App.css";
 
 export default function Result(props) {
@@ -24,6 +25,7 @@ export default function Result(props) {
             <img src={iconLink} alt="description" />
             <div className="float-left">
               <WeatherTemperature celsius={props.result.temperature} />
+              <WeatherForecast coord={props.result.coordinates} />
             </div>
           </div>
         </div>
