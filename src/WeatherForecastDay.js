@@ -9,8 +9,8 @@ export default function WeatherForecastDay(props) {
     return days[day];
   }
   return (
-    <div className="weather-forecast-day">
-      <div className="forecast-day text-center">{day()}</div>
+    <div className="weather-forecast-day text-center">
+      <div className="forecast-day">{day()}</div>
       <img src={iconLink} alt="" width="80" height="90" />
       <div classname="forecast-temperatures">
         <span className="forecast-temp-max">
