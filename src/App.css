@@ -85,3 +85,9 @@ li {
   font-size: 30px;
   margin-top: 40px;
 }
+.weather-forecast-day {
+  margin-top: 20px;
+}
+.forecast-temp-max {
+  margin-left: 13px;
+}

@@ -28,20 +28,9 @@ export default function Weather() {
     setCity(event.target.value);
   }
   function search() {
-    let apiKey = "e43d0522c6a2b491f8bte6b227o4172b";
+    let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
     let units = "metric";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(showTemperature);
-  }
-  function current(event) {
-    event.preventDefault();
-    navigator.geolocation.getCurrentPosition(getCurrentData);
-  }
-  function getCurrentData(position) {
-    let apiKey = "e43d0522c6a2b491f8bte6b227o4172b";
-    let longitude = position.coordinates.longitude;
-    let latitude = position.coordinates.latitude;
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showTemperature);
   }
   if (weatherData.ready) {
@@ -51,17 +40,7 @@ export default function Weather() {
           <div className="weather-app">
             <form onSubmit={handleSubmit} className="mb-3">
               <div className="row">
-                <div className="col-2">
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    id="current-location"
-                    onClick={current}
-                  >
-                    Current{" "}
-                  </button>
-                </div>
-                <div className="col-8">
+                <div className="col-9">
                   <input
                     type="search"
                     onChange={updateCity}
@@ -70,7 +49,7 @@ export default function Weather() {
                     autoComplete="off"
                   />
                 </div>
-                <div className="col-2">
+                <div className="col-3">
                   <input
                     type="submit"
                     value="Search"
