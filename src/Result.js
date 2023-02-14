@@ -1,7 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
-import WeatherForecast from "./WeatherForecast";
 import "./App.css";
 
 export default function Result(props) {
@@ -13,7 +12,7 @@ export default function Result(props) {
         <ul className="overview-weather">
           <li>
             <span>
-              <FormattedDate date={props.result.data} />
+              <FormattedDate date={props.result.date} />
             </span>
           </li>
           <li className="text-capitalize">{props.result.description}</li>
@@ -24,7 +23,11 @@ export default function Result(props) {
           <div className="d-flex weather-temperature">
             <img src={iconLink} alt="description" />
             <div className="float-left">
-              <WeatherTemperature celsius={props.result.temperature} />
+              <WeatherTemperature
+                temperature={props.result.temperature}
+                unit={props.unit}
+                setUnit={props.setUnit}
+              />
             </div>
           </div>
         </div>
@@ -41,7 +44,6 @@ export default function Result(props) {
           </div>
         </div>
       </div>
-      <WeatherForecast coordinates={props.result.coordinates} />
     </div>
   );
 }

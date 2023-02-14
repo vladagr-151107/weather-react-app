@@ -18,7 +18,7 @@ export default function WeatherForecastDay(props) {
         </span>{" "}
         /
         <span className="forecast-temp-min">
-          {Math.round(props.tewmperature.minimum)}C
+          {Math.round(props.temperature.minimum)}C
         </span>
       </div>
     </div>

@@ -4,8 +4,8 @@ import WeatherForecastDay from "./WeatherForecastDay";
 import "./App.css";
 
 export default function WeatherForecast(props) {
-  let [loaded, setLoaded] = useState(false);
-  let [forecast, setForecast] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
 
   useEffect(() => {
     setLoaded(false);
@@ -13,12 +13,10 @@ export default function WeatherForecast(props) {
   // we use useEffect only when we want to change something. if the coordinates change, set loaded false
 
   function handleResponse(response) {
-    console.log(response.data);
-    setForecast(response.data);
+    setForecast(response.data.daily);
     setLoaded(true);
   }
   if (loaded) {
-    console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div className="row">
@@ -26,7 +24,7 @@ export default function WeatherForecast(props) {
             if (index < 6) {
               return (
                 <div className="col-2" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
+                  <WeatherForecastDay day={dailyForecast} unit={props.unit} />
                 </div>
               );
             }
