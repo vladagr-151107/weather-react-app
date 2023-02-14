@@ -8,7 +8,7 @@ export default function App() {
   function showTemperature(response) {
     setWeatherData({
       ready: true,
-      coord: response.data.coordinates,
+      coordinates: response.data.coordinates,
       city: response.data.city,
       temperature: response.data.temperature.current,
       data: new Date(response.data.time * 1000),

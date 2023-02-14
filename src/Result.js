@@ -25,7 +25,7 @@ export default function Result(props) {
             <img src={iconLink} alt="description" />
             <div className="float-left">
               <WeatherTemperature celsius={props.result.temperature} />
-              <WeatherForecast coord={props.result.coordinates} />
+              <WeatherForecast coordinates={props.result.coordinates} />
             </div>
           </div>
         </div>
