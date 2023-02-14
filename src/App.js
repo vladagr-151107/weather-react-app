@@ -30,6 +30,17 @@ export default function App() {
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showTemperature);
   }
+  function current(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(getCurrentData);
+  }
+  function getCurrentData(position) {
+    let apiKey = "e43d0522c6a2b491f8bte6b227o4172b";
+    let longitude = position.coordinates.longitude;
+    let latitude = position.coordinates.latitude;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(showTemperature);
+  }
   if (weatherData.ready) {
     return (
       <div className="container">
@@ -42,6 +53,7 @@ export default function App() {
                     type="button"
                     className="btn btn-primary"
                     id="current-location"
+                    onClick={current}
                   >
                     Current{" "}
                   </button>
@@ -69,21 +81,13 @@ export default function App() {
           <small>
             <a
               className="link"
-              href="https://github.com/vladagr-151107/my-app"
+              href="https://github.com/vladagr-151107/weather-react-app"
               target="_blank"
               rel="noreferrer"
             >
               Open-source code
             </a>{" "}
-            by{" "}
-            <a
-              className="link"
-              href="https://www.instagram.com/_princesska_1511_/?igshid=YmMyMTA2M2Y%3D"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Vlada Grushchenko
-            </a>
+            by Vlada Grushchenko
           </small>
         </div>
       </div>

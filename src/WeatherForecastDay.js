@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function WeatherForecastDay(props) {
-  let iconLink = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.description.icon}.png`;
+  let iconLink = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.condition.icon}.png`;
   function day() {
     let date = new Date(props.date.time * 1000);
     let day = date.getDay();
